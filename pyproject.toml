@@ -1,0 +1,35 @@
+[project]
+authors = [{name = "Maeve Murphy Quinlan", email = "earmmu@leeds.ac.uk"}]
+description = "Testing a pixi-python-shiny workflow"
+name = "shiny-python-workflow"
+requires-python = ">= 3.11"
+version = "0.1.0"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "dash",
+    "plotly",
+    "dash_bootstrap_components",
+    "wheel",
+    "shiny",
+    "htmltools",
+    "palmerpenguins",
+    "shinywidgets",
+    "marimo",
+    "jupyter",
+    "seaborn"
+]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+
+
+[tool.pixi.tasks]

@@ -1,0 +1,30 @@
+---
+title: "Testing embedding Shiny"
+format: 
+  html:
+    theme: cosmo
+server: shiny
+---
+
+
+```{python}
+from shiny import render, ui
+from shiny.express import input
+```
+
+# This is an example of embedded Python/Shiny code
+
+Here is some paragraph text
+
+```{python}
+ui.panel_title("Hello Shiny!")
+ui.input_slider("n", "N", 0, 100, 20)
+```
+
+Here is some more text
+
+```{python}
+@render.text
+def txt():
+    return f"n*2 is {input.n() * 2}"
+```
